@@ -10,5 +10,4 @@ Bhagyashri Ugale
 Email : bhagyashriugale6970@gmail.com
 
 # Link :
-url : https://github.com/bhagyashrianilugale/Simon-saysGame.git
-
+url :  https://bhagyashrianilugale.github.io/Simon-saysGame/
