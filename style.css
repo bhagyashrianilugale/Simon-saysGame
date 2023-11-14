@@ -29,7 +29,7 @@ h3+h1+h2{
    background-color: hsl(45, 85%, 42%);
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
    right: 130px;
-   left: 550px;
+   left: 500px;
    top:90px;
    z-index: 1;
 }
