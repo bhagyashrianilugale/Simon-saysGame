@@ -6,25 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simon game</title>
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
       <div>
           <h1>💀*Simon Game*💀</h1>
-         <h2>Press any key to start game</h2>
-               <h3></h3>
-        
-        <div class="box-button">
-            <div class="first-line">
-               <div class="btn pink"type="button" id="pink"></div>
-               <div class="btn green"type="button" id="green"></div>
+             <form action="./assets/rule.html">
+               <button class="rule">Game Rule</button>
+            </form>
+            <h3></h3>
+             <h2>Press play key to start game</h2>
+               <button class="play">Play</button>
+            <div class="box-button">
+               <div class="first-line">
+                   <div class="btn pink" type="button" id="pink"></div>
+                   <div class="btn green" type="button" id="green"></div>
+              </div>
+              <div class="second-line">
+                 <div class="btn orange" type="button" id="orange"></div>
+                 <div class="btn blue" type="button" id="blue"></div>
+              </div>
             </div>
-            <div class="second-line">
-               <div class="btn orange" type="button" id="orange"></div>
-               <div class="btn blue"type="button" id="blue"></div>
-            </div>
-         </div>
       </div>
-    
      <script src="app.js"></script>
   </body>
 </html>

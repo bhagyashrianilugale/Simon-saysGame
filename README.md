@@ -1,5 +1,6 @@
 # Simon-saysGame
-A memory game using HTML ,CSS ,and JavaScript
+A memory game using HTML, CSS and JavaScript
+
 # Technologies :
 1. HTML
 2. CSS

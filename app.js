@@ -5,9 +5,12 @@ let score=[];
 let level=0;
 let started=false;
 let h2=document.querySelector("h2");
+let playBtn = document.querySelector(".play");
+let ruleBtn = document.querySelector(".rule");
 let btns=["pink","green","orange","blue"];
 
-document.addEventListener("keypress",function(){
+
+document.addEventListener("click", function(){
     if(started==false){
         console.log("Game is starded");
         started=true;
@@ -27,7 +30,7 @@ function userFlash(btn){
     setTimeout(function(){
         btn.classList.remove("userflash");
       },250);
-    };
+      };
 
 function levelUp(){
     userSeq=[];
@@ -48,47 +51,52 @@ function checkAns(idx){
           } 
          }
     else{
-         h2.innerHTML=`Game OVER!! Your<b> score was ${level}</b><br>Press any key to start game`;
+        document.querySelector("body").style.backgroundColor="red";
+        setTimeout(function(){
+              document.querySelector("body").style.backgroundColor="white";
+           },150);
          let h3=document.querySelector("h3");
          score.push(level);
          console.log(score);
-         let  highScore=-1;
+         let  highScore = -1;
          for(let i=0;i<score.length;i++){
             if(highScore<score[i]){
                 highScore=score[i];
                 console.log(highScore);
-            }
-         }
-        
-          h3.innerText=`High-score ${highScore}`;
-
-        
-         reset();
-        document.querySelector("body").style.backgroundColor="red";
-        setTimeout(function(){
-        document.querySelector("body").style.backgroundColor="white";
-        },150);
-        }};
-
-function btnPress(){
-        console.log(this);
+             }
+         };
+         h2.innerHTML=`High Score ${highScore}`;
+         h3.innerHTML=`Game OVER!! Your<b> score is ${level}               
+         </b><br>Press any key to start game`;
+         const audio = new Audio("./assets/game-over-audio.mp3");
+         audio.play();
+        reset();
+       }};
+  
+       function btnPress(){
+       console.log(this);
         let btn=this;
         userFlash(btn);
+        const audio = new Audio("./assets/button-audio.mp3");
+        audio.play();
         userColor=btn.getAttribute("id");
         console.log(userColor);
         userSeq.push(userColor);
         checkAns(userSeq.length-1);
      };
 
-    let allBtns=document.querySelectorAll(".btn");
-    for(btn of allBtns){
+    let allBtns = document.querySelectorAll(".btn");
+    for( let btn of allBtns){
     btn.addEventListener("click",btnPress);
     }
 
     function reset(){
-    started=false;
-    gameSeq=[];
-    userSeq=[];
-    level=0;
-    };
+        console.log("reset game");
+        started= false;
+        gameSeq=[];
+        userSeq=[];
+        level=0;
+     };
+
+// Description
 
