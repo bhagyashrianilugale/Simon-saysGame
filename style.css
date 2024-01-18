@@ -22,17 +22,17 @@ h3+h1+h2{
 
 .box-button{
    display: flex;
-   height: 500px;
-   width: 500px;
+   height: 400px;
+   width: 400px;
    align-items: center;
    justify-content: center;
    position: relative;
    background-color: hsl(45, 85%, 42%);
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-   right: 80px;
-   left: 480px;
-   top:90px;
-   z-index: 1;
+    /* right: 100px; */
+    left: 540px; 
+    top:90px;
+    z-index: 1;
 }
 
 .play,.rule,.back {
